@@ -1,0 +1,250 @@
+@media screen and (max-width:991px) {
+    .main-page {
+        height: 160vh;
+    }
+
+  .navbar .menu {
+        display: none;
+    }
+
+    .header-text p {
+        text-align: center;
+    }
+
+    .service-cards-section {
+        padding: 0px 50px;
+    }
+    .customer-card img {
+        left: 39%;
+        
+    }
+}
+
+@media screen and (max-width:769px) {
+    p {
+        font-size: 16px;
+    }
+
+   .navbar .cross-icon {
+        font-size: 20px;
+        align-self: flex-end;
+        display: inline;
+    }
+
+    nav .links {
+        height: 0;
+        overflow: hidden;
+        background-color: rgba(6, 1, 75, 0.8);
+        margin: 0;
+        padding: 0;
+        width: 40%;
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        transition: height 0.3s ease-in-out;
+        z-index: 2;
+        /* Adjust the transition duration as needed */
+
+    }
+
+    nav .links.active {
+        height: 100%;
+    }
+
+    nav .links ul {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px 20px;
+    }
+
+    nav .links a {
+        color: rgb(255, 255, 255);
+
+    }
+
+    .main-page {
+        height: 70vh;
+    }
+
+    .main-page-content {
+        /* padding: 20px; */
+        margin: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-page-content p {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .main-content-text {
+        width: 100%;
+    }
+
+    .main-image img {
+        margin-top: 30px;
+        width: 100%;
+    }
+    .customer-card img {
+        left: 32%;
+        
+    }
+    
+
+    .service-cards-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 80%;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .about-content img {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    .our-team {
+        padding: 100px 20px;
+    }
+
+    .team-cards-section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .team-card {
+        width: 45%;
+    }
+
+ .navbar .menu {
+        display: inline-block;
+        color: white;
+        font-size: 32px;
+    }
+
+}
+
+@media screen and (max-width:479px) {
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    nav .links {
+        width: 60%;
+    }
+
+    .main-page {
+        height: 78vh;
+    }
+
+    .main-page-content {
+        padding: 0;
+        margin: 50px 20px;
+    }
+
+    .main-image img {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .our-services {
+        margin-top: 50px;
+    }
+
+    .service-cards-section {
+        padding: 0 20px;
+    }
+
+    .service-card {
+        width: 100%;
+    }
+
+    .about-us {
+        padding: 100px 20px;
+    
+    }
+
+    .about-content img {
+        width: 100%;
+    }
+
+    .choose-us {
+        margin: 100px 20px;
+    }
+
+    .choose-box p {
+        font-size: 1rem;
+    }
+
+    .our-team {
+        padding: 100px 20px;
+    }
+
+    .team-card {
+        width: 100%;
+    }
+
+    .customers {
+        margin: 100px 20px;
+    }
+
+    .customers-cards-section {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    .customer-card {
+        width: 100%;
+    }
+    .customer-card img {
+        left: 37%;
+        
+    }
+    .aspirasi iframe {
+        width: 90%;
+        
+    }
+
+    footer {
+        padding: 50px 20px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 50px 0px;
+
+    }
+
+    .info {
+        width: 100%;
+    }
+
+}
