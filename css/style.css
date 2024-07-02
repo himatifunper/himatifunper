@@ -1,0 +1,598 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /* overflow-x: hidden; */
+}
+
+:root {
+    scroll-behavior: smooth;
+    
+}
+
+.navbar .cross-icon,
+.navbar .menu {
+    display: none;
+    z-index: 1;
+    
+    
+    
+}
+
+.padding-horizontal {
+    padding: 0px 100px;
+}
+
+.margin-top {
+    margin-top: 80px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+p {
+    font-size: 1.3rem;
+    margin: 10px 0px;
+}
+
+.gap10 {
+    gap: 10px;
+}
+
+.justify-space-evenly {
+    justify-content: space-evenly;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.main-page p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.blue-color {
+    color: #00bbf0;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+
+.primary-btn {
+    color: white;
+    background-color: #00bbf0;
+    padding: 10px 25px;
+    border: none;
+    font-size: 1.2rem;
+    display: inline-block;
+    width: 180px;
+    cursor: pointer;
+}
+
+.main-page {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-slider {
+    width: 400%; /* Sesuaikan dengan jumlah gambar, dalam hal ini empat gambar */
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: slide 10s linear infinite;
+}
+
+.background-slider img {
+    width: 25%; /* Sesuaikan dengan jumlah gambar, dalam hal ini empat gambar */
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.background-slider img {
+    opacity: 1;
+}
+
+
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   padding: 20px;
+   z-index: 1;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+.logo p{
+    font-size: 1rem;
+ 
+    color: white;
+    z-index: 1;
+}
+.logo img {
+    width: 70px; /* Adjust the width as needed */
+    margin-right: 10px; /* Add margin for spacing */
+    z-index: 1;
+}
+.links {
+    z-index: 1;
+}
+.links ul {
+    display: flex;
+    list-style: none;
+    z-index: 1;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0 25px;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.links i {
+    padding-right: 10px;
+    z-index: 1;
+}
+
+
+
+.main-page-content {
+    justify-content: space-between;
+    margin-top: 100px;
+    align-items: center;
+    z-index: 1;
+}
+
+.main-content-text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1;
+}
+
+.main-image img {
+    width: 40vw;
+    animation-name: upDownAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+/* berita terbaru */
+
+.container_berita {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #16007a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(231, 69, 69, 0.1);
+    text-align: center;
+}
+
+.header_berita {
+    text-align: center;
+}
+
+.slider-container {
+    position: relative;
+    perspective: 1000px;
+}
+
+.news-slider {
+    width: 70%;
+    margin: auto;
+    transform-style: preserve-3d;
+}
+
+.news-item {
+    width: 100%;
+    box-sizing: border-box;
+    height: 400px;
+    transition: transform 0.5s;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transform: translateZ(0);
+
+}
+
+.news-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.news-item img {
+    width: 100%;
+    height: 200px; /* Sesuaikan tinggi gambar sesuai keinginan Anda */
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.news-content h2 {
+    margin-top: 10px;
+    font-size: 18px; /* Sesuaikan ukuran judul sesuai keinginan Anda */
+}
+
+.news-content p {
+    flex-grow: 1;
+    margin-bottom: 10px;
+    font-size: 14px; /* Sesuaikan ukuran deskripsi sesuai keinginan Anda */
+}
+
+.slide-prev, .slide-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.slide-prev {
+    left: 10px;
+}
+
+.slide-next {
+    right: 10px;
+}
+/* fungsi dan tujuan */
+
+.customers {
+    margin: 100px 100px;
+    gap: 80px;
+    align-items: center;
+ 
+    
+}
+
+.customer-card p {
+    margin: 0;
+    text-align: start;
+    font-size: 1.1rem;
+    line-height: 30px;
+    
+}
+
+.customers-cards-section {
+    gap: 100px;
+    padding-top: 80px;
+
+
+}
+
+.customer-card {
+    position: relative;
+    /* border: 1px solid grey; */
+    box-shadow: 5px 5px 15px rgb(196, 194, 194);
+    width: 500px;
+    margin: 0 auto;
+    
+
+
+
+}
+
+.customer-card img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -60px;
+    left: 44%;
+    
+}
+
+.card-detail {
+    padding: 70px 20px;
+    gap: 20px;
+
+}
+.card-detail h4 {
+  text-align: center;
+
+}
+
+
+
+
+/* ---------divisi organisasi---- */
+
+.our-services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin: 100px 0px;
+}
+
+.service-cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.service-card {
+    flex: 0 0 calc(33.33% - 40px); /* Menggunakan calc untuk menangani margin antar card */
+    background-color: #231F20;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.service-card p {
+    margin: 0;
+    color: #fff;
+    
+}
+.service-card h3 {
+    text-align: center;
+    
+}
+
+.service-card img {
+    height: 100px;
+    width: 250px;
+    display: block; /* Mengatasi elemen inline-block whitespace gap */
+    margin: 0 auto; /* Rata tengah gambar di dalam .service-card */
+  
+}
+
+
+.read-more {
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.read-more:hover {
+    color: #00bbf0;
+}
+
+
+/* --------About-us--------- */
+
+.about-us {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    background-color:  #3f38be; 
+    
+    padding: 100px 100px;
+
+}
+
+.about-content {
+    display: flex;
+    gap: 40px;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+}
+
+
+.about-content img {
+    width: 30vw;
+    animation-name: upDownAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.about-content-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: start;
+}
+
+/* --------choose us------------- */
+
+.choose-us {
+    margin: 100px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+
+}
+
+.choose-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+}
+
+.choose-box p {
+    margin: 0;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 30px;
+}
+
+.choose-box img {
+    height: 120px;
+    width: 120px;
+    padding: 25px;
+    border: 5px solid #06014b;
+    border-radius: 50%;
+}
+
+
+
+/* divisi presidium */
+
+.our-team {
+    margin: 100px 0px;
+    padding: 100px 50px;
+    background-color: #06014b;
+    color: white;
+    align-items: center;
+    gap: 40px;
+}
+
+.team-cards-section {
+    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap; /* Mengatur agar kartu tim dapat mengalir ke baris baru ketika mencapai lebar maksimum */
+    justify-content: center; /* Untuk membuat kartu tim berada di tengah */
+    
+}
+.team-cards-section p {
+    word-spacing: 5px;
+}
+
+.team-card {
+    gap: 30px;
+    align-items: center;
+    width: 25%;
+    background-color: #1e1b64;
+    padding: 50px 0px;
+    align-items: center; /* Untuk membuat div rata tengah secara horizontal */
+    text-align: center; /* Untuk membuat konten teks rata tengah */
+    margin: 0 auto; /* Untuk membuat div rata tengah secara vertical */
+    margin-bottom: 20px; /* Menambahkan jarak antara setiap kartu tim */
+    box-shadow: 10px 7px 20px orange;
+
+}
+
+.team-card img {
+    height: 350px;
+    width: 400px;
+    
+   
+  
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    color: white;
+}
+
+.social-media i {
+    font-size: 24px;
+    color: white;
+}
+
+/* -------------footer-section---------- */
+
+
+footer {
+    padding: 50px;
+    background-color: #06014b;
+    color: white;
+}
+
+.address {
+    gap: 30px;
+    align-items: start;
+}
+
+footer .social-media {
+    width: 150px;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.info {
+    width: 30%;
+}
+
+.links {
+    gap: 30px;
+}
+
+
+.links-name {
+    gap: 20px;
+    text-align: start;
+}
+
+.sub-footer {
+    text-align: center;
+    margin: 25px 0;
+}
+
+
+@keyframes upDownAnimation {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translateY(100px);
+
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+    
+}
